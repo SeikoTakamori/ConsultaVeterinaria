@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@drawable/background1"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Registro"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="50dp"
+        android:gravity="center"
+        android:id="@+id/loginTv"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:hint="Nombre y apellido"
+        android:textColorHint="@color/white"
+        android:id="@+id/edname"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="#30ffffff"
+        android:layout_below="@id/loginTv"
+        android:drawableLeft="@drawable/person"
+        android:drawablePadding="10dp"
+        android:inputType="textPersonName"
+        android:layout_height="wrap_content"/>
+
+
+    <EditText
+        android:id="@+id/edEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edname"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="10dp"
+        android:hint="Correo electronico"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColorHint="@color/white"/>
+
+    <EditText
+        android:id="@+id/edPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edEmail"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/pass2"
+        android:drawablePadding="40dp"
+        android:hint="Digite una contraseña"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColorHint="@color/white"/>
+
+    <EditText
+        android:id="@+id/edpassConf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edPass"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/pass2"
+        android:drawablePadding="40dp"
+        android:hint="Confirmas contraseña"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColorHint="@color/white"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_below="@id/edpassConf"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:backgroundTint="#00BCD4"
+        android:text="Entrar"
+        android:textStyle="bold"
+        android:id="@+id/registerBtn"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_below="@id/registerBtn"
+        android:text="Volver a la pagina de acceso"
+        android:id="@+id/tv_gtLogin"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Menu"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="50dp"
+        android:gravity="center"
+        android:id="@+id/menuTv"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_below="@id/menuTv"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#00BCD4"
+        android:text="Registrar consulta"
+        android:drawableLeft="@drawable/agregar"
+        android:textStyle="bold"
+        android:id="@+id/consultaBtn"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/citaBtn"
+        android:layout_width="247dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/consultaBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#00BCD4"
+        android:drawableLeft="@drawable/calendario"
+        android:gravity="center"
+        android:text="Mis citas"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/salirBtn"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/citaBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#00BCD4"
+        android:drawableLeft="@drawable/salir"
+        android:gravity="center"
+        android:text="Salir"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

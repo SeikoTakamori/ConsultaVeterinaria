@@ -22,6 +22,13 @@ class MenuActivity : AppCompatActivity() {
             insets
         }
 
+        /**Accion del boton registrar consulta*/
+        val btnReservarCita = findViewById<Button>(R.id.consultaBtn)
+        btnReservarCita.setOnClickListener{
+            goCreateAppointment()
+
+        }
+        /**Accion del boton de salida*/
         val btnsalir = findViewById<Button>(R.id.salirBtn)
         btnsalir.setOnClickListener(){
             clearSessionPreference()
@@ -30,10 +37,16 @@ class MenuActivity : AppCompatActivity() {
         }
     }
 
+    /**Metodo para llamar al formulario de login al cerras sesion  */
     private  fun goLogin(){
         val i =Intent(this, MainActivity::class.java)
         startActivity(i)
         finish()
+    }
+
+    private fun goCreateAppointment(){
+        val i = Intent(this,CreateAppointmentActivity::class.java)
+        startActivity(i)
     }
     private fun clearSessionPreference(){
         val preferences = PreferenceHelper.defaultPrefs(this)

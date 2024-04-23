@@ -39,7 +39,7 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/citaBtn"
+        android:id="@+id/McitaBtn"
         android:layout_width="247dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/consultaBtn"
@@ -61,7 +61,7 @@
         android:id="@+id/salirBtn"
         android:layout_width="245dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/citaBtn"
+        android:layout_below="@id/McitaBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"

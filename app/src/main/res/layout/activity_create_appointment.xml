@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@drawable/background3"
+    android:layout_height="match_parent"
+    tools:context=".ui.CreateAppointmentActivity">
+
+    <TextView
+        android:id="@+id/citaTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:text="Reservar Consulta"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/citaTv"
+        android:id="@+id/cv_siguiente"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white"
+
+        android:layout_margin="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvCintoma"
+                android:text="Cintoma de la mascota"/>
+
+            <EditText
+                android:id="@+id/txtCintoma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="16dp"/>
+
+            <TextView
+                android:id="@+id/tvPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCintoma"
+                android:layout_marginTop="10dp"
+                android:text="Especie del paciente" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spPaciente"
+                android:layout_below="@id/tvPaciente"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvConsulaT"
+                android:text="Tipo de consulta"
+                android:layout_below="@id/spPaciente"
+                android:layout_margin="10dp"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rgOpciones"
+                android:layout_below="@id/tvConsulaT"
+                android:orientation="vertical">
+                <RadioButton android:id="@+id/radio_consulta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Consulta"/>
+                <RadioButton android:id="@+id/radio_examenes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Examenes"/>
+
+                <RadioButton android:id="@+id/radio_cirugia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cirugia"/>
+            </RadioGroup>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSiguiente"
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rgOpciones"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#00BCD4"
+                android:drawableRight="@drawable/siguiente"
+                android:gravity="center"
+                android:text="Siguiente"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cv_enviarF"
+        android:layout_below="@+id/cv_siguiente"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white"
+        android:visibility="gone"
+        android:layout_margin="16dp">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvVeterinario"
+                    android:text="Elija un veterinario"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spVeterinario"
+                    android:layout_below="@id/tvVeterinario"/>
+
+                <TextView
+                    android:id="@+id/tvFechaCita"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spVeterinario"
+                    android:layout_marginTop="15dp"
+                    android:text="Fecha de la cita" />
+
+                <EditText
+                    android:id="@+id/txtFechaCita"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvFechaCita"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="16dp"/>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvConsulaH"
+                    android:text="Hora de atencion"
+                    android:layout_below="@id/txtFechaCita"
+                    android:layout_margin="10dp"/>
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rgOpcioneHora"
+                    android:layout_below="@id/tvConsulaH"
+                    android:orientation="vertical">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8:00 AM"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8:30 AM"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9:00 AM"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9:30 AM"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10:00 AM"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10:30 AM"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11:00 AM"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11:30 AM"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12:00 AM"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1:00 PM"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1:30 PM"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2:00 PM"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2:30 PM"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3:00 PM"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3:30 P´M"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4:00 PM"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4:30 PM"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:00 PM"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30 PM"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6:00 PM"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6:30 PM"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7:00 PM"/>
+
+                </RadioGroup>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEnviar"
+                    android:layout_width="219dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rgOpcioneHora"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="#00BCD4"
+                    android:drawableRight="@drawable/enviar"
+                    android:gravity="center"
+                    android:text="Enviar"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</RelativeLayout>

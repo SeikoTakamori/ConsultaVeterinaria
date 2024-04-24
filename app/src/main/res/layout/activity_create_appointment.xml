@@ -115,12 +115,13 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:id="@+id/cv_enviarF"
         android:layout_below="@+id/cv_siguiente"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
         app:cardBackgroundColor="@color/white"
-        android:visibility="gone"
+
         android:layout_margin="16dp">
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -150,6 +151,12 @@
 
                 <EditText
                     android:id="@+id/txtFechaCita"
+                    android:onClick="onClickScheduledDate"
+                    android:inputType="date"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:maxLines="1"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tvFechaCita"
@@ -167,116 +174,32 @@
                     android:text="Hora de atencion"
                     android:layout_below="@id/txtFechaCita"
                     android:layout_margin="10dp"/>
-                <RadioGroup
+                <LinearLayout
+                    android:id="@+id/liner1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rgOpcioneHora"
                     android:layout_below="@id/tvConsulaH"
                     android:orientation="vertical">
-                    <RadioButton
-                        android:layout_width="wrap_content"
+                    <RadioGroup
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="8:00 AM"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="8:30 AM"/>
+                        android:id="@+id/rgOpcioneHora"
+                        android:layout_below="@id/tvConsulaH"
+                        android:orientation="vertical">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="8:00 AM"/>
+                    </RadioGroup>
+                </LinearLayout>
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="9:00 AM"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="9:30 AM"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="10:00 AM"/>
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="10:30 AM"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="11:00 AM"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="11:30 AM"/>
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="12:00 AM"/>
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1:00 PM"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1:30 PM"/>
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="2:00 PM"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="2:30 PM"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="3:00 PM"/>
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="3:30 P´M"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4:00 PM"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4:30 PM"/>
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="5:00 PM"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="5:30 PM"/>
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="6:00 PM"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="6:30 PM"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="7:00 PM"/>
-
-                </RadioGroup>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnEnviar"
                     android:layout_width="219dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/rgOpcioneHora"
+                    android:layout_below="@id/liner1"
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"

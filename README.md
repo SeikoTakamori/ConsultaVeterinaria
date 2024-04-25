@@ -21,7 +21,7 @@ la fecha y hora deseada.
 
 ##Instalacion 
 Para poder ejecutar la aplicacion en un dispositivo Android:
-1- Clona el repositorio.
-2- Abre el proyecto en Android Studio.
-3- Conecta un dispositivo Android o utiliza un emulador.
-4- Ejecutar la aplicacion.
+- Clona el repositorio.
+- Abre el proyecto en Android Studio.
+- Conecta un dispositivo Android o utiliza un emulador.
+- Ejecutar la aplicacion.
